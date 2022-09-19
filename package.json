@@ -1,0 +1,75 @@
+{
+  "_from": "hbit-api",
+  "_inBundle": false,
+  "_integrity": "sha512-c8PTt6feevV8oDUiF2T4QJqCl9QlutPMpqoUwZ/+tqO4kg8lSk3Z7NYavwKMD8HcE8o0xVbms8wW7b3wuA9LoQ==",
+  "_location": "/hbit-api",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "hbit-api",
+    "name": "hbit-api",
+    "escapedName": "hbit-api",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/hbit-api/-/hbit-api-1.25.10.tgz",
+  "_shasum": "15ffb1696fbf3ca0489c01f69365adf929a135bb",
+  "_spec": "hbit-api",
+  "_where": "C:\\Users\\giaky\\Desktop\\hbit-api",
+  "author": "HBIT Developers (https://hashbit.org)",
+  "dependencies": {
+    "bluebird": "2.x.x",
+    "browser-request": "0.x.x",
+    "request": "2.x.x"
+  },
+  "deprecated": false,
+  "description": "API request wrapper for HBIT crypto for Node.js and the browser. It just has all the currently public API methods for HBIT along side with a dual API Promise/Callback based interface. Plus it's created using Typescript, which should ensure the proper parameters for each API call.",
+  "devDependencies": {
+    "browserify": "5.x.x",
+    "chai": "1.x.x",
+    "mocha": "1.x.x",
+    "sinon": "1.x.x"
+  },
+  "engines": {
+    "node": "10.x.x"
+  },
+  "homepage": "https://github.com/HashBitorg/node-hbit-api#readme",
+  "keywords": [
+    "hbit",
+    "json",
+    "crypto",
+    "hbitcrypto",
+    "api",
+    "request"
+  ],
+  "license": "MIT",
+  "main": "hbit-api.js",
+  "name": "hbit-api",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/HashBitorg/node-hbit-api.git"
+  },
+  "scripts": {
+    "browser": "browserify hbit-api.js --noparse request --noparse bluebird --ignore request --standalone HBIT > dist/hbit-api.js",
+    "compile": "tsc --noImplicitAny --declaration typings/tsd.d.ts --module \"commonjs\" -t ES5 hbit-api.ts example/index.ts",
+    "coverage": "npm run compile && node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha",
+    "coveralls": "npm run compile && node ./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- --report lcovonly && cat ./coverage/lcov.info | node ./node_modules/coveralls/bin/coveralls.js",
+    "example": "npm run compile && node example",
+    "publish": "npm run test && npm run browser && npm publish",
+    "test": "npm run compile && mocha"
+  },
+  "version": "1.25.10",
+  "bugs": {
+    "url": "https://github.com/HashBitorg/node-hbit-api/issues"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  }
+}

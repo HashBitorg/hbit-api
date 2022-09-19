@@ -1,0 +1,36 @@
+{
+  "name": "hbit-api",
+  "version": "1.0.0",
+  "homepage": "https://github.com/HashBitorg/node-hbit-api",
+  "authors": [
+    "HBIT Developers <support@hashbit.org>"
+  ],
+  "description": "HBIT crypto API wrapper for usage on the browser",
+  "main": "dist/hbit-api.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "hbit",
+    "json",
+    "crypto",
+    "hbitcrypto",
+    "api",
+    "request"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "example",
+    "typings",
+    "*.ts",
+    "./hbit-*",
+    "test",
+    "tsd.json",
+    "tslint.json",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
